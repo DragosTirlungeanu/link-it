@@ -34,6 +34,18 @@ class JobsController < Sinatra::Base
 		redirect "/jobs"
 	end
 
+	put '/jobs/:id' do
+		id = params[:id].to_i
+		job = Job.find id
+		job.title = params[:title]
+		job.company = params[:company]
+		job.sector = params[:sector]
+		job.location = params[:location]
+		job.salary = params[:salary]
+		job.save
+		redirect "/jobs"
+	end
+
 	delete '/jobs/:id' do
 		id = params[:id].to_i
 		Job.destroy id

@@ -4,7 +4,7 @@ class Job
 	def save
 		conn = Job.open_connection
 		if (!self.id)
-			sql = "INSERT INTO job (title, company, sector, location, salary) VALUES ('#{self.title}', '#{self.company}', '#{self.sector}', '#{self.location}','#{self.salary}')"
+			sql = "INSERT INTO job (title, company, sector, location, salary) VALUES ('#{self.title}','#{self.company}','#{self.sector}','#{self.location}','#{self.salary}')"
 		else
 			sql = "UPDATE job SET title='#{self.title}', company='#{self.company}', sector='#{self.sector}', location='#{self.location}', salary='#{self.salary}' WHERE id = #{self.id}"
 		end
@@ -41,6 +41,7 @@ class Job
 
 	def self.hydrate post_data
 		job = Job.new
+		
 		job.id = post_data['id']
 		job.title = post_data['title']
 		job.company = post_data['company']
