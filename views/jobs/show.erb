@@ -4,7 +4,7 @@
 <p><%= @job.location %></p>
 <p><%= @job.salary %></p>
 
-<input type="submit" href="/jobs/<%= @job.id %>/edit" value="Edit">
+<a href="/jobs/<%= @job.id %>/edit">edit</a>
 
 <form action="/jobs/<%= @job.id %>" method="POST">
 <input type="hidden" name="_method" value="DELETE">
