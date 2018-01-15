@@ -3,7 +3,8 @@
 <p><%= @job.sector %></p>
 <p><%= @job.location %></p>
 <p><%= @job.salary %></p>
-<input type="submit" href="/<%= @job.id %>/edit" value="Edit">
+
+<input type="submit" href="/jobs/<%= @job.id %>/edit" value="Edit">
 
 <form action="/jobs/<%= @job.id %>" method="POST">
 <input type="hidden" name="_method" value="DELETE">

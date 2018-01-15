@@ -6,7 +6,7 @@ class Job
 		if (!self.id)
 			sql = "INSERT INTO job (title, company, sector, location, salary) VALUES ('#{self.title}', '#{self.company}', '#{self.sector}', '#{self.location}','#{self.salary}')"
 		else
-			sql = "UPDATE post SET title='#{self.title}', company='#{self.company}', sector='#{self.sector}', location='#{self.location}', salary='#{self.salary}' WHERE id = #{self.id}"
+			sql = "UPDATE job SET title='#{self.title}', company='#{self.company}', sector='#{self.sector}', location='#{self.location}', salary='#{self.salary}' WHERE id = #{self.id}"
 		end
 	conn.exec(sql)
 	end
