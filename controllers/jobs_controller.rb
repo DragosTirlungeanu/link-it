@@ -43,7 +43,7 @@ class JobsController < Sinatra::Base
 		job.location = params[:location]
 		job.salary = params[:salary]
 		job.save
-		redirect "/jobs"
+		redirect "/jobs";
 	end
 
 	delete '/jobs/:id' do
