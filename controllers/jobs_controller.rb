@@ -23,7 +23,7 @@ class JobsController < Sinatra::Base
 		erb :'jobs/show'
 	end
 
-	post '/jobs/' do
+	post '/jobs' do
 		job = Job.new
 		job.title = params[:title]
 		job.company = params[:company]
