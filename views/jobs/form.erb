@@ -1,0 +1,36 @@
+<form action="/<%= @job.id %>" method="POST">
+
+<div>
+	<label>Insert Job</label>
+	<input type="text" name="title" placeholder="Enter Title" value="<%= @job.title %>">
+</div>
+
+<div>
+	<label>What is your company?</label>
+	<textarea name="company" placeholder="Company Name"><%= @job.company %></textarea>
+</div>
+
+<div>
+	<label>What Sector needs cover?</label>
+	<textarea name="sector" placeholder="Enter Sector"><%= @job.sector %></textarea>
+</div>
+
+<div>
+	<label>Where are you posting from?</label>
+	<textarea name="location" placeholder="Enter location"><%= @job.location %></textarea>
+</div>
+
+<div>
+	<label>Wages</label>
+	<textarea name="salary" placeholder="Enter the relevant amount"><%= @job.salary %></textarea>
+</div>
+
+<div>
+	<input type="submit" value="Submit new Job">
+</div>
+
+<% if(@job.id) %>
+	<input type="hidden" name="_method" value="PUT">
+<% end %>
+
+</form>

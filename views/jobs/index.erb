@@ -1,0 +1,12 @@
+<h1>Recruitment app</h1>
+
+<% @jobs.each do |job| %>
+	<div>
+		<h3><a href="/jobs/<%= job.id %>"><%= job.title %></a></h3>
+		<p><%= job.title %></p>
+		<p><%= job.company %></p>
+		<p><%= job.sector %></p>
+		<p><%= job.location %></p>
+		<p><%= job.salary %></p>
+	</div>
+<% end %>
