@@ -10,9 +10,11 @@
   crossorigin="anonymous"></script>
 	<title><%= @title %></title>
 </head>
-<body>
-	<%= erb(:'partials/navi', :layout => false) %>
-	<%= yield %>
-	<script src="<%= url('/js/app.js') %>" charset="utf-8"></script>
+<body class="container">
+	<div class="well well-lg">
+		<%= erb(:'partials/navi', :layout => false) %>
+		<%= yield %>
+		<script src="<%= url('/js/app.js') %>" charset="utf-8"></script>
+	</div>
 </body>
 </html>
