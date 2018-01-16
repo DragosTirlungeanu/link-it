@@ -8,7 +8,7 @@ class Job
 		else
 			sql = "UPDATE job SET title='#{self.title}', company='#{self.company}', sector='#{self.sector}', location='#{self.location}', salary='#{self.salary}' WHERE id = #{self.id}"
 		end
-	conn.exec(sql)
+		conn.exec(sql)
 	end
 
 	def self.open_connection

@@ -1,0 +1,13 @@
+* {
+	font-family: sans-serif;
+}
+
+body {
+	background-image: url('../images/bkg.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#col {
+	background-color: #C6C3C3;
+}
